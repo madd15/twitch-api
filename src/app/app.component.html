@@ -1,0 +1,21 @@
+<div id='wrap'>
+
+  <div id='gamelist'>
+    <div ng-controller='gameList'>
+      <li ng-repeat="game in result.top">
+        <h4 ng-click=''></h4>
+      </li>
+    </div>
+  </div><!-- End Gamelist -->
+
+  <!--<div id='gameinfo'>
+          <div ng-controller='gameInfo'>
+                  <li ng-repeat="game in result.top">
+                          {{result.top[$index].game.name}}
+                  </li>
+          </div>
+  </div><!-- End Gamelist -->
+  <button type="button" (click)="onGetData()">Get Data</button>
+  <button type="button" (click)="onGetSubs()">Get Subs</button>
+  <button type="button" (click)="onUnSub()">Unsub</button>
+</div><!-- End Wrap -->
