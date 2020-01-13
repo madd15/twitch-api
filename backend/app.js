@@ -11,11 +11,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(__dirname + '/dist/twitch-hooks'));
+app.use(express.static('/app/src'));
 
 app.get('/', function(req,res) {
 
-  res.sendFile(path.join(__dirname+'/dist/twitch-hooks/index.html'));
+  res.sendFile(path.join('/app/src/index.html'));
 });
 
 app.use(bodyParser.json());
