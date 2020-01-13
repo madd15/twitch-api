@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 
@@ -10,10 +11,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(__dirname + '/dist/twitch-hooks'));
+
+app.get('/', function(req,res) {
+
+  res.sendFile(path.join(__dirname+'/dist/twitch-hooks/index.html'));
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.route('/twitch/followers').get((req, res, next) => {
+app.route('/_twitch/followers').get((req, res, next) => {
   console.log(req.query['hub.callback']);
 }).post(bodyParser, (req, res) => {
   res.send('Ok');
