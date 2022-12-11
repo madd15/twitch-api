@@ -26,7 +26,7 @@
     "axios": "^0.19.1",
     "body-parser": "latest",
     "debug": "latest",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "typescript": "~3.5.3",
